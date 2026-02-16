@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // URL Base
 const BASE_URL = "http://localhost:3001/proyectosViales";
 
@@ -58,3 +59,14 @@ export async function deleteProyecto(id) {
         return false;
     }
 }
+=======
+const apiFetch = async (endpoint, options = {}) => {
+  const response = await fetch(endpoint, options);
+  if (!response.ok) {
+    throw new Error(`Error ${response.status}`);
+  }
+  return response.json();
+};
+
+window.apiFetch = apiFetch;
+>>>>>>> 618a47f8bb002856bf49f5d03eb90f66af1a0d77
