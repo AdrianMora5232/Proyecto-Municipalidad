@@ -1,7 +1,7 @@
 {
   "reportes": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "Bache",
       "ubicacion": "San Rafael, avenida central",
       "estado": "Pendiente",
@@ -10,37 +10,44 @@
   ],
   "servicios": [
     {
-      "id": 1,
+      "id": "1",
       "tipo": "Recolección de Residuos",
       "descripcion": "Recolección de basura ordinaria en zona norte",
       "responsable": "Gestión Ambiental",
       "estado": "Activo"
+    },
+    {
+      "id": "454f",
+      "tipo": "Reciclaje",
+      "descripcion": "Recolección de plásticos",
+      "responsable": "Mamerto Alvolante",
+      "estado": ""
     }
   ],
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Administrador",
       "email": "admin@escazu.go.cr",
       "password": "admin",
       "rol": "Admin"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "camil",
       "email": "asdf@gmail.com",
       "password": "aaaa",
       "rol": "Ciudadano"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "asdf",
       "email": "asdf@gmail.com",
       "password": "asdf",
       "rol": "Ciudadano"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Camil",
       "email": "thecamil999@gmail.com",
       "password": "Asdf111",
@@ -49,7 +56,7 @@
   ],
   "proyectos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Recarpeteo Calle Vieja",
       "descripcion": "Mejora de la carpeta asfaltica en 2km",
       "presupuesto": 15000000,

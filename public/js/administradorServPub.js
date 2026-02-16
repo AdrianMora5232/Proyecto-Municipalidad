@@ -243,6 +243,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else if (target.classList.contains('btn-edit')) {
                 const nuevaDesc = prompt("Nueva descripción:");
                 const nuevoResp = prompt("Nuevo responsable:");
+                const nuevoEstado = prompt("Nuevo estado:");
+                const nuevoTipo = prompt("Nuevo tipo:");
                 if (nuevaDesc && nuevoResp) {
                     await actualizarServicio(id, { descripcion: nuevaDesc, responsable: nuevoResp });
                 }
