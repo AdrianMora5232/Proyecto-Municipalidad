@@ -29,8 +29,11 @@
 
       <div style="text-align: center; margin-top: 1.5rem;">
         <span style="color: var(--text-light)">¿No tiene una cuenta?</span>
-        <a href="/pages/register.html">Regístrese aquí</a>
+        <a href="register.html">Regístrese aquí</a>
       </div>
+
+      <button type="button" class="btn secondary" onclick="window.location.href='index.html'"
+        style="width: 100%; margin-top: 1rem;">Volver al Inicio</button>
     </form>
   </main>
 
@@ -72,7 +75,7 @@
 
         // Redirect based on role
         if (user.rol === 'Admin') {
-          window.location.href = '/pages/dashboard.html';
+          window.location.href = 'administrador.html';
         } else {
           window.location.href = '/pages/index.html';
         }
