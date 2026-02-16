@@ -1,60 +1,109 @@
-// URL Base
-const BASE_URL = "http://localhost:3001/proyectosViales";
+const BASE_URL = "http://localhost:3001";
 
-export async function getProyecto() {
+// =========================
+// GET
+// =========================
+export const get = async (endpoint) => {
     try {
-        const respuestaServidor = await fetch(BASE_URL);
-        const datosProyectos = await respuestaServidor.json();
-        return datosProyectos;
-    } catch (error) {
-        console.error("Error al obtener los proyectos", error);
-    }
-
-}
-
-export async function postProyecto(proyecto) {
-    try {
-        const respuestaServidor = await fetch(BASE_URL, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(proyecto)
-        });
-        const datosProyecto = await respuestaServidor.json();
-        return datosProyecto;
-    } catch (error) {
-        console.error("Error al crear el proyecto", error);
-    }
-}
-
-export async function updateProyecto(id, proyecto) {
-    try {
-        const respuestaServidor = await fetch(`${BASE_URL}/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(proyecto)
-        });
-        const datosProyecto = await respuestaServidor.json();
-        return datosProyecto;
-    } catch (error) {
-        console.error("Error al actualizar el proyecto", error);
-    }
-}
-
-export async function deleteProyecto(id) {
-    try {
-        const respuestaServidor = await fetch(`${BASE_URL}/${id}`, {
-            method: 'DELETE'
-        });
-        if (!respuestaServidor.ok) {
-            throw new Error('No se pudo eliminar el proyecto');
+        const response = await fetch(`${BASE_URL}/${endpoint}`);
+        if (!response.ok) {
+            throw new Error(`Error GET: ${response.statusText}`);
         }
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+// =========================
+// POST
+// =========================
+export const post = async (endpoint, data) => {
+    try {
+        const response = await fetch(`${BASE_URL}/${endpoint}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error POST: ${response.statusText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+// =========================
+// PUT
+// =========================
+export const put = async (endpoint, data) => {
+    try {
+        const response = await fetch(`${BASE_URL}/${endpoint}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error PUT: ${response.statusText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+// =========================
+// PATCH
+// =========================
+export const patch = async (endpoint, data) => {
+    try {
+        const response = await fetch(`${BASE_URL}/${endpoint}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error PATCH: ${response.statusText}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+};
+
+// =========================
+// DELETE
+// =========================
+export const del = async (endpoint) => {
+    try {
+        const response = await fetch(`${BASE_URL}/${endpoint}`, {
+            method: "DELETE"
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error DELETE: ${response.statusText}`);
+        }
+
         return true;
     } catch (error) {
-        console.error("Error al eliminar el proyecto", error);
-        return false;
+        console.error(error);
+        throw error;
     }
-}
+};
