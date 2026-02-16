@@ -59,6 +59,9 @@ body {
 
 .sidebar-nav ul {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .nav-item {
@@ -72,7 +75,8 @@ body {
     color: rgba(255, 255, 255, 0.8);
 }
 
-.nav-item:hover, .nav-item.active {
+.nav-item:hover,
+.nav-item.active {
     background-color: var(--secondary-color);
     color: white;
     border-left: 4px solid var(--accent-color);
@@ -143,8 +147,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive adjustments */
@@ -152,15 +163,16 @@ body {
     .sidebar {
         width: 70px;
     }
-    
-    .sidebar-header h2, .nav-item span {
+
+    .sidebar-header h2,
+    .nav-item span {
         display: none;
     }
-    
+
     .main-content {
         margin-left: 70px;
     }
-    
+
     .nav-item {
         justify-content: center;
         padding: 15px 0;
@@ -169,4 +181,45 @@ body {
     .nav-item i {
         font-size: 1.2rem;
     }
+}
+
+/* User Form Styles */
+.form-container {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    margin-top: 20px;
+    max-width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.form-container label {
+    font-weight: 600;
+    color: var(--secondary-color);
+    margin-top: 15px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-container input:focus {
+    border-color: var(--accent-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 20px;
 }
