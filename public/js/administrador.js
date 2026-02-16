@@ -1,37 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
+// Navigation Logic
+export function navigateToSection(targetId) {
     const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('.section');
     const pageTitle = document.getElementById('page-title');
 
+    // Update Sidebar
+    navItems.forEach(nav => {
+        nav.classList.remove('active');
+        if (nav.dataset.target === targetId) {
+            nav.classList.add('active');
+            const titleText = nav.querySelector('span').textContent;
+            pageTitle.textContent = titleText;
+        }
+    });
+
+    // Update Content
+    sections.forEach(section => {
+        section.style.display = 'none';
+        section.classList.remove('active');
+    });
+
+    const targetSection = document.getElementById(`${targetId}-section`);
+    if (targetSection) {
+        targetSection.style.display = 'block';
+        setTimeout(() => {
+            targetSection.classList.add('active');
+        }, 10);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Sidebar Navigation ---
+    const navItems = document.querySelectorAll('.nav-item');
+
     navItems.forEach(item => {
         item.addEventListener('click', () => {
-            // Remove active class from all items
-            navItems.forEach(nav => nav.classList.remove('active'));
-
-            // Add active class to clicked item
-            item.classList.add('active');
-
-            // Get target section
             const targetId = item.getAttribute('data-target');
-
-            // Update page title
-            const titleText = item.querySelector('span').textContent;
-            pageTitle.textContent = titleText;
-
-            // Hide all sections and show the target one
-            sections.forEach(section => {
-                section.style.display = 'none';
-                section.classList.remove('active');
-            });
-
-            const targetSection = document.getElementById(`${targetId}-section`);
-            if (targetSection) {
-                targetSection.style.display = 'block';
-                // Small delay to allow display:block to apply before opacity transition if we add one
-                setTimeout(() => {
-                    targetSection.classList.add('active');
-                }, 10);
-            }
+            navigateToSection(targetId);
         });
     });
 });
+
