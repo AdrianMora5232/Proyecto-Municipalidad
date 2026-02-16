@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración Municipal</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item active" data-target="reportes">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Gestión de Reportes</span>
+                    </li>
+                    <li class="nav-item" data-target="viales">
+                        <i class="fas fa-road"></i>
+                        <span>Proyectos Viales</span>
+                    </li>
+                    <li class="nav-item" data-target="servicios">
+                        <i class="fas fa-faucet"></i>
+                        <span>Servicios Públicos</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 id="page-title">Gestión de Reportes</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+
+            <div id="content-area">
+                <div id="reportes-section" class="section active">
+                    <h3>Reportes Recientes</h3>
+                    <p>Aquí se mostrará la gestión de reportes.</p>
+                </div>
+                <div id="viales-section" class="section" style="display: none;">
+                    <h3>Proyectos Viales en Curso</h3>
+                    <p>Aquí se mostrará la gestión de proyectos viales.</p>
+                </div>
+                <div id="servicios-section" class="section" style="display: none;">
+                    <h3>Estado de Servicios Públicos</h3>
+                    <p>Aquí se mostrará la gestión de servicios públicos.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../js/administrador.js"></script>
+</body>
+
+</html>
