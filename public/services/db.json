@@ -1,5 +1,14 @@
 {
-  "reportes": [],
+  "reportes": [
+    {
+      "id": "d6ec",
+      "type": "señalización",
+      "location": "jksd",
+      "description": "hfushfiu",
+      "timestamp": "2026-02-17T22:18:57.022Z",
+      "status": "pendiente"
+    }
+  ],
   "servicios": [
     {
       "id": "1",
@@ -16,10 +25,6 @@
       "estado": "En proceso"
     },
     {
-      "id": "5285",
-      "tipo": "Reciclaje",
-      "descripcion": "Recolección Plástico",
-      "responsable": "Mamerto Goméz",
       "id": "271d",
       "tipo": "recoleccion  de basura",
       "descripcion": "recoleccion de basura",
@@ -69,6 +74,13 @@
       "email": "miniaseapaaaaa@gmail.com",
       "password": "Admc5232.",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "6107",
+      "nombre": "LGN",
+      "email": "lgn@esxazu.com",
+      "password": "L123451",
+      "rol": "Ciudadano"
     }
   ],
   "proyectos": [
@@ -95,6 +107,14 @@
       "presupuesto": "1000000",
       "fechaInicio": "2026-02-26",
       "estado": "En proceso"
+    },
+    {
+      "id": "1f76",
+      "nombre": "sdjjv",
+      "descripcion": "hfdsh",
+      "presupuesto": "76764",
+      "fechaInicio": "",
+      "estado": "hjgh"
     }
   ]
 }

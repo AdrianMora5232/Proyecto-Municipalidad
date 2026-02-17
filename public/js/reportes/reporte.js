@@ -1,3 +1,6 @@
+
+const API_BASE_URL = 'http://localhost:3001/reportes';
+
 document.addEventListener('DOMContentLoaded', () => {
     const reportForm = document.getElementById('report-form');
     const responseMessage = document.getElementById('response-message');
@@ -27,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('user_reports', JSON.stringify(reports));
 
             // 2. POST to Server
-            const response = await fetch('/api/reports', {
+            const response = await fetch(API_BASE_URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
