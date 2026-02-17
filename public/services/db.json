@@ -20,6 +20,10 @@
       "tipo": "Reciclaje",
       "descripcion": "Recolección Plástico",
       "responsable": "Mamerto Goméz",
+      "id": "271d",
+      "tipo": "recoleccion  de basura",
+      "descripcion": "recoleccion de basura",
+      "responsable": "adrian",
       "estado": ""
     }
   ],
@@ -58,6 +62,13 @@
       "email": "miniaseapaaaaa@gmail.com",
       "password": "A123456",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "73ee",
+      "nombre": "adrian mora aaaa",
+      "email": "miniaseapaaaaa@gmail.com",
+      "password": "Admc5232.",
+      "rol": "Ciudadano"
     }
   ],
   "proyectos": [
@@ -75,6 +86,14 @@
       "descripcion": "arreglo de ruta 22",
       "presupuesto": "1000000",
       "fechaInicio": "2026-02-20",
+      "estado": "En proceso"
+    },
+    {
+      "id": "b1d5",
+      "nombre": "Calle los madrigal",
+      "descripcion": "arreglo de calle ",
+      "presupuesto": "1000000",
+      "fechaInicio": "2026-02-26",
       "estado": "En proceso"
     }
   ]

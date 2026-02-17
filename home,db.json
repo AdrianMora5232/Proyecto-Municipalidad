@@ -1,0 +1,11 @@
+{
+  "reports": [
+    {
+      "type": "señalización",
+      "location": "100 metros de la iglesia",
+      "description": "falta de señalizacion ",
+      "timestamp": "2026-02-17T21:21:28.246Z",
+      "status": "pendiente"
+    }
+  ]
+}
