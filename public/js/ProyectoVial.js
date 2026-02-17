@@ -4,7 +4,7 @@ import { navigateToSection } from './administrador.js';
 const API_BASE = 'http://localhost:3001/proyectos';
 
 const btnAgregar = document.getElementById('agregarProyecto');
-const listaProyectos = document.getElementById('lista-viales');
+const listaProyectos = document.getElementById('lista-proyectos');
 const inputId = document.getElementById('proyectoId');
 
 // Form Inputs
@@ -49,8 +49,8 @@ btnAgregar.addEventListener('click', async () => {
     limpiarFormulario();
     cargarProyectos();
 
-    // Stay in "viales" section to see the updated list
-    navigateToSection('viales');
+    // Auto-navigate to "Gestion de Reportes" to show the list
+    navigateToSection('reportes');
 });
 
 function limpiarFormulario() {
