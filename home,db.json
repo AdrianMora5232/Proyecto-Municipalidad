@@ -1,0 +1,43 @@
+{
+    "institutional": {
+        "title": "Gestión Ciudadana Moderna",
+        "description": "Escazú Conecta es una plataforma digital desarrollada para apoyar la gestión de reportes ciudadanos relacionados con infraestructura vial y servicios públicos del cantón."
+    },
+    "about": {
+        "mision": "Mejorar la calidad de vida de los habitantes de Escazú mediante servicios públicos eficientes, sostenibles y transparentes.",
+        "vision": "Ser un cantón líder en innovación digital, participación ciudadana y desarrollo urbano moderno en Costa Rica.",
+        "valores": "Integridad, compromiso social, transparencia y excelencia en la atención a nuestra ciudadanía."
+    },
+    "areas": [
+        {
+            "id": 1,
+            "icon": "🛣️",
+            "name": "Infraestructura vial"
+        },
+        {
+            "id": 2,
+            "icon": "🛑",
+            "name": "Señalización"
+        },
+        {
+            "id": 3,
+            "icon": "🪠",
+            "name": "Alcantarillado"
+        },
+        {
+            "id": 4,
+            "icon": "♻️",
+            "name": "Recolección de residuos"
+        },
+        {
+            "id": 5,
+            "icon": "💡",
+            "name": "Alumbrado público"
+        },
+        {
+            "id": 6,
+            "icon": "🌳",
+            "name": "Zonas verdes"
+        }
+    ]
+}
