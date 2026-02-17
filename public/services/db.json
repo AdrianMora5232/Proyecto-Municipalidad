@@ -65,6 +65,13 @@
       "email": "miniaseapaaaaa@gmail.com",
       "password": "Admc5232.",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "c7f3",
+      "nombre": "alejandro",
+      "email": "alejandro@gmail.com",
+      "password": "Admc5232.",
+      "rol": "Ciudadano"
     }
   ],
   "proyectos": [
