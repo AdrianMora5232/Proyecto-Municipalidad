@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Reporte | Municipalidad de Escazú</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="reporte.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="../../pages/home.html" class="logo-wrapper" style="text-decoration: none;">
+            <img src="../../img/logo.png" alt="Escazú Conecta Logo" class="main-logo">
+            <span class="brand-title">Municipalidad de Escazú</span>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="../../pages/home.html" class="nav-link">Home</a>
+            <a href="../../pages/login.html" class="nav-link">Login</a>
+            <a href="../../pages/register.html" class="nav-link">Register</a>
+            <a href="../../pages/login.html" class="nav-link-btn">Dashboard de Administrador</a>
+        </nav>
+    </header>
+
+    <main class="report-container">
+        <section class="report-card">
+            <h2>Registrar Reporte</h2>
+            <p>Complete la información para informar sobre un problema de servicio público o vial.</p>
+
+            <form id="report-form">
+                <div class="form-group">
+                    <label for="reportType">Tipo de Reporte</label>
+                    <select id="reportType" class="form-control" required>
+                        <option value="" disabled selected>Seleccione una opción</option>
+                        <option value="infraestructura">Infraestructura Vial (Baches)</option>
+                        <option value="señalización">Señalización</option>
+                        <option value="alcantarillado">Alcantarillado</option>
+                        <option value="recolección">Recolección de Residuos</option>
+                        <option value="alumbrado">Alumbrado Público</option>
+                        <option value="zonas-verdes">Mantenimiento de Zonas Verdes</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Ubicación</label>
+                    <input type="text" id="location" class="form-control" placeholder="Ej: 100m norte de la Iglesia"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Descripción del Problema</label>
+                    <textarea id="description" class="form-control" rows="4"
+                        placeholder="Describa el problema detalladamente..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit" id="submit-btn">Enviar Reporte</button>
+            </form>
+
+            <div id="response-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <h3>Municipalidad de Escazú</h3>
+                <p>Trabajando para el bienestar de nuestro cantón.</p>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <p>© 2026 Municipalidad de Escazú – Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Lógica -->
+    <script src="../../js/reportes/reporte.js"></script>
+</body>
+
+</html>
