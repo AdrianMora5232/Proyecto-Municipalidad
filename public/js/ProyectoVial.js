@@ -1,8 +1,10 @@
-import { getProyecto, postProyecto, updateProyecto, deleteProyecto } from '../services/fetch.js';
+import { get, post, patch, del } from '../services/fetch.js';
 import { navigateToSection } from './administrador.js';
 
+const API_BASE = 'http://localhost:3001/proyectos';
+
 const btnAgregar = document.getElementById('agregarProyecto');
-const listaProyectos = document.getElementById('lista-proyectos');
+const listaProyectos = document.getElementById('lista-viales');
 const inputId = document.getElementById('proyectoId');
 
 // Form Inputs
@@ -35,20 +37,20 @@ btnAgregar.addEventListener('click', async () => {
 
     if (id) {
         // Update existing project
-        await updateProyecto(id, proyectoData);
+        await patch(id, proyectoData);
         alert('Proyecto actualizado exitosamente');
         btnAgregar.textContent = 'Agregar Proyecto'; // Reset button text
     } else {
         // Create new project
-        await postProyecto(proyectoData);
+        await post("proyectos", proyectoData);
         alert('Proyecto agregado exitosamente');
     }
 
     limpiarFormulario();
     cargarProyectos();
 
-    // Auto-navigate to "Gestion de Reportes" to show the list
-    navigateToSection('reportes');
+    // Stay in "viales" section to see the updated list
+    navigateToSection('viales');
 });
 
 function limpiarFormulario() {
@@ -61,7 +63,7 @@ function limpiarFormulario() {
 }
 
 async function cargarProyectos() {
-    const proyectos = await getProyecto();
+    const proyectos = await get('proyectos');
     listaProyectos.innerHTML = '';
 
     if (proyectos && proyectos.length > 0) {

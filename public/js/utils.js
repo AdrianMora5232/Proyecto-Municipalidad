@@ -1,6 +1,6 @@
 // Utility functions for API interaction
 
-const API_BASE = '/api';
+const API_BASE = 'http://localhost:3001/usuarios';
 
 /**
  * Validates the email format.
@@ -13,7 +13,7 @@ export const isValidEmail = (email) => {
  * General wrapper for fetch requests.
  */
 export const apiFetch = async (endpoint, options = {}) => {
-    const url = `${API_BASE}${endpoint}`;
+    const url = `${API_BASE}${usuarios}`;
 
     const defaultHeaders = {
         'Content-Type': 'application/json',

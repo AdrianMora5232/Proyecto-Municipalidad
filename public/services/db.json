@@ -1,13 +1,6 @@
 {
-  "reportes": [
-    {
-      "id": "1",
-      "tipo": "Bache",
-      "ubicacion": "San Rafael, avenida central",
-      "estado": "Pendiente",
-      "prioridad": "Alta"
-    }
-  ],
+  "reportes": [],
+  
   "servicios": [
     {
       "id": "1",
@@ -17,11 +10,11 @@
       "estado": "Activo"
     },
     {
-      "id": "454f",
-      "tipo": "Reciclaje",
-      "descripcion": "Recolección de plásticos",
-      "responsable": "Mamerto Alvolante",
-      "estado": ""
+      "id": "fdd8",
+      "tipo": "recoleccion de basura",
+      "descripcion": "recoleccion de basura",
+      "responsable": "David m",
+      "estado": "En proceso"
     }
   ],
   "usuarios": [
@@ -52,6 +45,13 @@
       "email": "thecamil999@gmail.com",
       "password": "Asdf111",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "cbc7",
+      "nombre": "adrian mora aaaa",
+      "email": "miniaseapaaaaa@gmail.com",
+      "password": "A123456",
+      "rol": "Ciudadano"
     }
   ],
   "proyectos": [
@@ -62,6 +62,14 @@
       "presupuesto": 15000000,
       "fechaInicio": "2023-11-01",
       "estado": "En Progreso"
+    },
+    {
+      "id": "f413",
+      "nombre": "ruta 22",
+      "descripcion": "arreglo de ruta 22",
+      "presupuesto": "1000000",
+      "fechaInicio": "2026-02-20",
+      "estado": "En proceso"
     }
   ]
 }

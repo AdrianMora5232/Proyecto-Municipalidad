@@ -1,5 +1,4 @@
 // Authentication handling
-
 const SESSION_KEY = 'muni_user_session';
 
 export const auth = {
@@ -12,7 +11,7 @@ export const auth = {
         // Simulating login by checking if user exists in the public list
         // In a real scenario, this is insecure, but fits the current JSON-server-like backend.
         try {
-            const response = await fetch('/api/usuarios');
+            const response = await fetch('http://localhost:3001/usuarios');
             const users = await response.json();
             // Find user matching BOTH email and password
             const user = users.find(u => u.email === email && u.password === password);
@@ -38,7 +37,7 @@ export const auth = {
         // Note: Password is field is not stored in the simple db.json structure shown, but we accept it.
 
         try {
-            const response = await fetch('/api/usuarios', {
+            const response = await fetch('http://localhost:3001/usuarios', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
