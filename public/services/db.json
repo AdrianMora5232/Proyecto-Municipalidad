@@ -64,13 +64,6 @@
       "rol": "Ciudadano"
     },
     {
-      "id": "3",
-      "nombre": "asdf",
-      "email": "asdf@gmail.com",
-      "password": "asdf",
-      "rol": "Ciudadano"
-    },
-    {
       "id": "4",
       "nombre": "Camil",
       "email": "thecamil999@gmail.com",
@@ -82,13 +75,6 @@
       "nombre": "adrian mora aaaa",
       "email": "miniaseapaaaaa@gmail.com",
       "password": "A123456",
-      "rol": "Ciudadano"
-    },
-    {
-      "id": "73ee",
-      "nombre": "adrian mora aaaa",
-      "email": "miniaseapaaaaa@gmail.com",
-      "password": "Admc5232.",
       "rol": "Ciudadano"
     },
     {
@@ -104,6 +90,13 @@
       "email": "lgn@esxazu.com",
       "password": "L123451",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "68f5",
+      "nombre": "adri",
+      "email": "adri@gmail.com",
+      "rol": "Admin",
+      "password": "Admc5232."
     }
   ],
   "proyectos": [
