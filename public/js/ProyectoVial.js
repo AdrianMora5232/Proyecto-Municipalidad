@@ -49,8 +49,8 @@ btnAgregar.addEventListener('click', async () => {
     limpiarFormulario();
     cargarProyectos();
 
-    // Auto-navigate to "Gestion de Reportes" to show the list
-    navigateToSection('reportes');
+    // Auto-navigate to "Proyectos Viales" to show the list
+    navigateToSection('viales');
 });
 
 function limpiarFormulario() {

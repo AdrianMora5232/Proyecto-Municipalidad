@@ -51,9 +51,9 @@
             <div id="content-area">
                 <div id="reportes-section" class="section active">
                     <h3>Reportes Recientes</h3>
-                    <p>Aquí se mostrará la gestión de reportes.</p>
-                    <div id="lista-proyectos" style="margin-top: 20px;">
-                        <!-- List will be rendered here -->
+                    <p>Aquí se mostrará la gestión de reportes de ciudadanos.</p>
+                    <div id="lista-reportes-ciudadanos" style="margin-top: 20px;">
+                        <!-- Report list will be rendered here -->
                     </div>
                 </div>
                 <div id="viales-section" class="section" style="display: none;">
@@ -81,6 +81,10 @@
                         <button id="agregarProyecto" class="btn-primary" style="margin-top: 10px;">Agregar
                             Proyecto</button>
                     </div>
+
+                    <div id="lista-proyectos" style="margin-top: 30px;">
+                        <!-- Road projects list will be rendered here -->
+                    </div>
                 </div>
                 <div id="servicios-section" class="section" style="display: none;">
                     <h3>Estado de Servicios Públicos</h3>
@@ -92,6 +96,7 @@
 
 
     <script type="module" src="../js/administradorServPub.js"></script>
+    <script type="module" src="../js/administradorReportes.js"></script>
     <script type="module" src="../js/ProyectoVial.js"></script>
     <script type="module" src="../js/administrador.js"></script>
 </body>
