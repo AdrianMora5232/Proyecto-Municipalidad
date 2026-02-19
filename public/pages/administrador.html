@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -37,6 +38,10 @@
                     <li class="nav-item" onclick="window.location.href='planillas.html'">
                         <i class="fas fa-money-check-alt"></i>
                         <span>Gestión de Planillas</span>
+                    </li>
+                    <li class="nav-item" data-target="financiamientos">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Financiamientos</span>
                     </li>
                     <li class="nav-item" onclick="window.location.href='index.html'"
                         style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);">
@@ -136,6 +141,68 @@
                         <!-- User list will be rendered here -->
                     </div>
                 </div>
+
+                <div id="financiamientos-section" class="section" style="display: none;">
+                    <h3>Gestión de Financiamientos</h3>
+                    <p>Administre las solicitudes de financiamiento para proyectos de construcción.</p>
+
+                    <div class="form-container">
+                        <input type="hidden" id="financiamientoId">
+
+                        <div class="form-group">
+                            <label for="Fin ProyectoNombre">Nombre del Proyecto</label>
+                            <input id="FinProyectoNombre" type="text" placeholder="Ej: Puente sobre Río Grande">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="FinDescripcion">Descripción</label>
+                            <textarea id="FinDescripcion" placeholder="Descripción detallada del proyecto"
+                                style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 15px; margin-bottom: 15px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label for="MontoSolicitado">Monto Solicitado (₡)</label>
+                                <input id="MontoSolicitado" type="number" placeholder="0.00">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="MontoAprobado">Monto Aprobado (₡)</label>
+                                <input id="MontoAprobado" type="number" placeholder="0.00">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="EntidadFinanciera">Entidad Financiera</label>
+                            <input id="EntidadFinanciera" type="text" placeholder="Ej: Banco Nacional">
+                        </div>
+
+                        <div class="form-row" style="display: flex; gap: 15px; margin-bottom: 15px;">
+                            <div class="form-group" style="flex: 1;">
+                                <label for="FechaSolicitud">Fecha de Solicitud</label>
+                                <input id="FechaSolicitud" type="date">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="FechaResolucion">Fecha de Resolución</label>
+                                <input id="FechaResolucion" type="date">
+                            </div>
+                            <div class="form-group" style="flex: 1;">
+                                <label for="EstadoFinanciamiento">Estado</label>
+                                <select id="EstadoFinanciamiento">
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="aprobado">Aprobado</option>
+                                    <option value="rechazado">Rechazado</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <button id="btnGuardarFinanciamiento" class="btn-primary" style="margin-top: 10px;">Guardar
+                            Financiamiento</button>
+                    </div>
+
+                    <div id="lista-financiamientos" style="margin-top: 30px;">
+                        <!-- Financing requests list will be rendered here -->
+                    </div>
+                </div>
             </div>
         </main>
     </div>
@@ -145,6 +212,7 @@
     <script type="module" src="../js/administradorReportes.js"></script>
     <script type="module" src="../js/administradorUsuarios.js"></script>
     <script type="module" src="../js/ProyectoVial.js"></script>
+    <script type="module" src="../js/financiamientos.js"></script>
     <script type="module" src="../js/administrador.js"></script>
 </body>
 

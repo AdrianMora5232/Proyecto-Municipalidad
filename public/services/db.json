@@ -171,5 +171,17 @@
       "rebajos": 10,
       "salarioNeto": 459375
     }
+  ],
+  "financiamientos": [
+    {
+      "id": "f25d",
+      "nombreProyecto": "calle ",
+      "descripcion": "escazu",
+      "montoSolicitado": "1000000",
+      "montoAprobado": "1000000",
+      "entidadFinanciera": "bcr",
+      "fechaSolicitud": "2026-02-19",
+      "estado": "pendiente"
+    }
   ]
 }

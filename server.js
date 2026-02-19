@@ -18,7 +18,7 @@ app.get('/api/data', (req, res) => {
 });
 
 app.post('/api/reports', (req, res) => {
-  const dbPath = path.join(__dirname, 'home,db.json');
+  const dbPath = path.join(__dirname, 'db.json');
   const newReport = req.body;
 
   fs.readFile(dbPath, 'utf8', (err, data) => {
