@@ -72,13 +72,6 @@
       "rol": "Ciudadano"
     },
     {
-      "id": "3",
-      "nombre": "asdf",
-      "email": "asdf@gmail.com",
-      "password": "asdf",
-      "rol": "Ciudadano"
-    },
-    {
       "id": "4",
       "nombre": "Camil",
       "email": "thecamil999@gmail.com",
@@ -90,13 +83,6 @@
       "nombre": "adrian mora aaaa",
       "email": "miniaseapaaaaa@gmail.com",
       "password": "A123456",
-      "rol": "Ciudadano"
-    },
-    {
-      "id": "73ee",
-      "nombre": "adrian mora aaaa",
-      "email": "miniaseapaaaaa@gmail.com",
-      "password": "Admc5232.",
       "rol": "Ciudadano"
     },
     {
@@ -119,6 +105,13 @@
       "email": "danielafervene@gmail.com",
       "password": "A1234567.",
       "rol": "Ciudadano"
+    },
+    {
+      "id": "68f5",
+      "nombre": "adri",
+      "email": "adri@gmail.com",
+      "rol": "Admin",
+      "password": "Admc5232."
     }
   ],
   "proyectos": [
@@ -153,6 +146,30 @@
       "presupuesto": "76764",
       "fechaInicio": "",
       "estado": "hjgh"
+    }
+  ],
+  "planillas": [
+    {
+      "empleadoId": "emp-0102",
+      "nombreEmpleado": "Daniela Fernandez Vanegas",
+      "puesto": "gestor administrativo",
+      "departamento": "Seguridad",
+      "salarioBase": 500,
+      "horasExtra": 0.03,
+      "rebajos": 0.1,
+      "salarioNeto": 499.93,
+      "id": "ef21"
+    },
+    {
+      "id": "aa6d",
+      "empleadoId": "emp-0102",
+      "nombreEmpleado": "Dani Fernandez Vargas",
+      "puesto": "gestor administrativo",
+      "departamento": "Obras Públicas",
+      "salarioBase": 500000,
+      "horasExtra": 3,
+      "rebajos": 10,
+      "salarioNeto": 459375
     }
   ]
 }

@@ -1,0 +1,91 @@
+/* planillas.css */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-container {
+    max-width: 800px;
+    /* Wider for the grid */
+}
+
+.readonly-input {
+    background-color: #e9ecef !important;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.btn-edit {
+    background-color: #f39c12;
+}
+
+.btn-delete {
+    background-color: #e74c3c;
+}
+
+.btn-edit:hover,
+.btn-delete:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Specific table adjustments */
+.servicios-table td {
+    font-size: 14px;
+}
+
+.currency {
+    font-weight: 500;
+}

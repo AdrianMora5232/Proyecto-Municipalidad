@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Planillas - Municipalidad</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/planillas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Panel Admin</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="nav-item" onclick="window.location.href='administrador.html'">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Volver al Panel</span>
+                    </li>
+                    <li class="nav-item active">
+                        <i class="fas fa-money-check-alt"></i>
+                        <span>Gestión de Planillas</span>
+                    </li>
+                    <li class="nav-item" onclick="window.location.href='index.html'"
+                        style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <i class="fas fa-home"></i>
+                        <span>Volver al Inicio</span>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-bar">
+                <h1 id="page-title">Gestión de Planillas (Salarios)</h1>
+                <div class="user-info">
+                    <span>Administrador</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+
+            <div id="content-area">
+                <div class="section active">
+                    <h3>Registro de Nueva Planilla</h3>
+                    <p>Complete los datos del empleado para registrar el pago salarial.</p>
+
+                    <form id="planilla-form" class="form-container">
+                        <input type="hidden" id="planilla-id">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="empleadoId">ID del Empleado</label>
+                                <input id="empleadoId" type="text" placeholder="EMP-001" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nombreEmpleado">Nombre Completo</label>
+                                <input id="nombreEmpleado" type="text" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="puesto">Puesto</label>
+                                <input id="puesto" type="text" placeholder="Ej: Gestor Administrativo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="departamento">Departamento</label>
+                                <select id="departamento" required>
+                                    <option value="">Seleccione...</option>
+                                    <option value="Administración">Administración</option>
+                                    <option value="Servicios Públicos">Servicios Públicos</option>
+                                    <option value="Obras Públicas">Obras Públicas</option>
+                                    <option value="Finanzas">Finanzas</option>
+                                    <option value="Seguridad">Seguridad</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="salarioBase">Salario Base (₡)</label>
+                                <input id="salarioBase" type="number" step="0.01" placeholder="0.00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="horasExtra">Horas Extra (Cant.)</label>
+                                <input id="horasExtra" type="number" step="0.5" placeholder="0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="rebajos">Rebajos (%)</label>
+                                <input id="rebajos" type="number" step="0.1" placeholder="0.0" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="salarioNeto">Salario Neto (₡)</label>
+                                <input id="salarioNeto" type="number" step="0.01" placeholder="0.00" readonly
+                                    class="readonly-input">
+                                <small>Cálculo automático</small>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" id="btnGuardarPlanilla" class="btn-primary">
+                                <i class="fas fa-save"></i> Guardar Registro
+                            </button>
+                            <button type="button" id="btnCancelar" class="btn-secondary" style="display: none;">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="table-container" style="margin-top: 40px;">
+                        <h3>Historial de Pagos</h3>
+                        <div class="table-responsive">
+                            <table class="servicios-table" id="tabla-planillas">
+                                <thead>
+                                    <tr>
+                                        <th>ID Emp.</th>
+                                        <th>Empleado</th>
+                                        <th>Puesto</th>
+                                        <th>Depto.</th>
+                                        <th>Base</th>
+                                        <th>H. Extra</th>
+                                        <th>Rebajos</th>
+                                        <th>Neto</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="lista-planillas-body">
+                                    <!-- Se cargará dinámicamente -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="../js/planillas.js"></script>
+</body>
+
+</html>
