@@ -2,7 +2,7 @@ const BASE_URL = "http://localhost:3001";
 
 // =========================
 // GET
-// =========================
+// =========================    
 export const get = async (endpoint) => {
     try {
         const response = await fetch(`${BASE_URL}/${endpoint}`);
